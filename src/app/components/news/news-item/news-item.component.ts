@@ -7,7 +7,12 @@ import {News} from '../../../models/news.interface';
   styleUrls: ['./news-item.component.scss'],
 })
 export class NewsItemComponent implements OnInit {
+  isShowDescription = false;
   constructor() {}
   @Input() news: News | null = null;
   ngOnInit(): void {}
+
+  onClick(): void {
+    this.isShowDescription = !this.isShowDescription;
+  }
 }
