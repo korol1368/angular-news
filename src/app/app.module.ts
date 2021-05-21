@@ -15,6 +15,7 @@ import {NewsService} from './services/news.service';
 import {ReactiveFormsModule} from '@angular/forms';
 import {NewsDetailComponent} from './components/news/news-detail/news-detail.component';
 import {NewsComponent} from './components/news/news.component';
+import {FontAwesomeModule} from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,7 @@ import {NewsComponent} from './components/news/news.component';
     NewsDetailComponent,
     NewsComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, NgbModule, HttpClientModule, ReactiveFormsModule],
+  imports: [BrowserModule, AppRoutingModule, NgbModule, HttpClientModule, ReactiveFormsModule, FontAwesomeModule],
   providers: [DataService, NewsService],
   bootstrap: [AppComponent],
 })

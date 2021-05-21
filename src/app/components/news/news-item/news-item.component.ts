@@ -1,5 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {News} from '../../../models/news.interface';
+import {faComment, faEye} from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-news-item',
@@ -7,9 +8,14 @@ import {News} from '../../../models/news.interface';
   styleUrls: ['./news-item.component.scss'],
 })
 export class NewsItemComponent implements OnInit {
+  faEye = faEye;
+  faComment = faComment;
+
   isShowDescription = false;
-  constructor() {}
   @Input() news: News | null = null;
+
+  constructor() {}
+
   ngOnInit(): void {}
 
   onClick(): void {

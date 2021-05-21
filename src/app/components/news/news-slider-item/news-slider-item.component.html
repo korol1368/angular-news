@@ -17,11 +17,11 @@
   <div class="item-info-block">
     <div class="item-date">{{ news.date | date: 'dd:MM:YYYY, HH:mm' }}</div>
     <div class="item-views-counter-block">
-      <i class="fa fa-eye"></i>
+      <fa-icon [icon]="faEye"></fa-icon>&nbsp;
       <span>{{ news.viewCount }}</span>
     </div>
     <div class="item-comments-counter-block">
-      <i class="fa fa-comment"></i>
+      <fa-icon [icon]="faComment"></fa-icon>&nbsp;
       <span>{{ news.commentsCount }}</span>
     </div>
   </div>
