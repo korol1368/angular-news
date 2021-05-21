@@ -6,9 +6,10 @@ import {AppComponent} from './app.component';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import {NewsListComponent} from './components/news/news-list/news-list.component';
 import {NewsItemComponent} from './components/news/news-item/news-item.component';
+import {NewsFormComponent} from './components/news/news-form/news-form.component';
 
 @NgModule({
-  declarations: [AppComponent, NewsListComponent, NewsItemComponent],
+  declarations: [AppComponent, NewsListComponent, NewsItemComponent, NewsFormComponent],
   imports: [BrowserModule, AppRoutingModule, NgbModule],
   providers: [],
   bootstrap: [AppComponent],
