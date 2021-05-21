@@ -1,37 +1,28 @@
-<div class="analytics_article" style="width: 100%; display: inline-block">
+<div *ngIf="news" class="analytics_article" style="width: 100%; display: inline-block">
   <a
     class="analytics_img_container"
-    href="/analitycs/203676_pratsvnik-zakhvorv-pd-chas-vdpustki-zdysnyumo-pererakhunok-vdpusknikh"
+    href="{{ news.link }}"
     style="
-      background: url('https://ligazakon.net/static_liga_net/THUMB/20170315_411_433x433.jpg') top center no-repeat;
+      background: url({{ news.image }}) top center no-repeat;
       background-size: cover;
     "
-    tabindex="-1"
   ></a>
   <div class="analytics_tags_block">
-    <a class="tag" href="/temy/otpuska" tabindex="-1">Відпустки</a>
+    <a *ngFor="let tag of news.tags" class="tag" href="{{ tag.url }}">{{ tag.title }}</a>
   </div>
-  <a
-    class="article_title"
-    href="/analitycs/203676_pratsvnik-zakhvorv-pd-chas-vdpustki-zdysnyumo-pererakhunok-vdpusknikh"
-    tabindex="-1"
-    >Працівник захворів під час відпустки: здійснюємо перерахунок відпускних</a
-  >
-  <p
-    class="article_description"
-    href="/analitycs/203676_pratsvnik-zakhvorv-pd-chas-vdpustki-zdysnyumo-pererakhunok-vdpusknikh"
-  >
-    В сучасному медіа "Інтерактивна бухгалтерія" продовжили розповідати про тонкощі надання відпусток
+  <a class="article_title" href="{{ news.link }}">{{ news.title }}</a>
+  <p class="article_description">
+    {{ news.description }}
   </p>
   <div class="item_info_block">
-    <div class="item_date">20.05.2021, 13:00</div>
+    <div class="item_date">{{ news.date | date: 'dd:MM:YYYY, HH:mm' }}</div>
     <div class="item_views_counter_block">
       <i class="fa fa-eye"></i>
-      <span>30</span>
+      <span>{{ news.viewCount }}</span>
     </div>
     <div class="item_comments_counter_block">
       <i class="fa fa-comment"></i>
-      <span>0</span>
+      <span>{{ news.commentsCount }}</span>
     </div>
   </div>
 </div>

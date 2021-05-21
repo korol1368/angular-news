@@ -1,4 +1,5 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
+import {News} from '../../../models/news.interface';
 
 @Component({
   selector: 'app-news-slider-item',
@@ -6,6 +7,8 @@ import {Component, OnInit} from '@angular/core';
   styleUrls: ['./news-slider-item.component.scss'],
 })
 export class NewsSliderItemComponent implements OnInit {
+  @Input() news: News | null = null;
+
   constructor() {}
 
   ngOnInit(): void {}
