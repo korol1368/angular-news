@@ -1,3 +1,9 @@
+<div class="section_title_block">
+  <div class="section_title_wrapper">
+    <h1 class="section_title">Новини</h1>
+  </div>
+  <div class="section_title_line"></div>
+</div>
 <ng-container *ngFor="let item of news; last as isLast">
   <app-news-item></app-news-item>
   <hr *ngIf="!isLast" />

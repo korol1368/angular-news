@@ -1,0 +1,17 @@
+.section_title_block {
+  display: flex;
+  margin-bottom: 20px;
+
+  .section_title {
+    font-size: 36px;
+    font-weight: 600;
+    color: #000;
+    text-decoration: none;
+  }
+
+  .section_title_line {
+    width: 100%;
+    border-bottom: 1px #a9a9a9 solid;
+    margin: 0 0 16px 10px;
+  }
+}
