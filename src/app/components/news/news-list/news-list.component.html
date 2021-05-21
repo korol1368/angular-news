@@ -1,0 +1,4 @@
+<ng-container *ngFor="let item of news; last as isLast">
+  <app-news-item></app-news-item>
+  <hr *ngIf="!isLast" />
+</ng-container>
