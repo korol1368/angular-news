@@ -1,26 +1,26 @@
-<div *ngIf="news" class="analytics_article" style="width: 100%; display: inline-block">
+<div *ngIf="news" class="analytics-article" style="width: 100%; display: inline-block">
   <a
-    class="analytics_img_container"
+    class="analytics-img-container"
     routerLink="/news/{{ news.ID }}"
     style="
       background: url({{ news.image }}) top center no-repeat;
       background-size: cover;
     "
   ></a>
-  <div class="analytics_tags_block">
+  <div class="analytics-tags-block">
     <a *ngFor="let tag of news.tags" class="tag" href="{{ tag.url }}">{{ tag.title }}</a>
   </div>
-  <a class="article_title" routerLink="/news/{{ news.ID }}">{{ news.title }}</a>
-  <p class="article_description">
+  <a class="article-title" routerLink="/news/{{ news.ID }}">{{ news.title }}</a>
+  <p class="article-description">
     {{ news.description }}
   </p>
-  <div class="item_info_block">
-    <div class="item_date">{{ news.date | date: 'dd:MM:YYYY, HH:mm' }}</div>
-    <div class="item_views_counter_block">
+  <div class="item-info-block">
+    <div class="item-date">{{ news.date | date: 'dd:MM:YYYY, HH:mm' }}</div>
+    <div class="item-views-counter-block">
       <i class="fa fa-eye"></i>
       <span>{{ news.viewCount }}</span>
     </div>
-    <div class="item_comments_counter_block">
+    <div class="item-comments-counter-block">
       <i class="fa fa-comment"></i>
       <span>{{ news.commentsCount }}</span>
     </div>

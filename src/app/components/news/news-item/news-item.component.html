@@ -1,26 +1,26 @@
-<div *ngIf="news" class="row news_item_block" (click)="onClick()">
+<div *ngIf="news" class="row news-item-block" (click)="onClick()">
   <div class="col-sm-9 col-12">
     <div class="row">
       <div class="col-sm-2 d-none d-sm-block"></div>
       <div class="col-sm-10 col-12">
-        <div class="news_item_tag_block">
+        <div class="news-item-tag-block">
           <a *ngFor="let tag of news.tags" class="tag" href="{{ tag.url }}}">{{ tag.title }}</a>
         </div>
       </div>
     </div>
     <div class="row">
-      <div class="col-sm-2 d-none d-sm-block news_item_time_block">
+      <div class="col-sm-2 d-none d-sm-block news-item-time-block">
         <span>{{ news.date | date: 'HH:mm' }}</span>
       </div>
-      <div class="col-sm-10 col-12 news_item_body">
-        <a class="article_title" routerLink="/news/{{ news.ID }}">{{ news.title }}</a>
-        <div *ngIf="isShowDescription" class="article_description">{{ news.description }}</div>
-        <div class="item_info_block">
-          <div class="item_views_counter_block">
+      <div class="col-sm-10 col-12 news-item-body">
+        <a class="article-title" routerLink="/news/{{ news.ID }}">{{ news.title }}</a>
+        <div *ngIf="isShowDescription" class="article-description">{{ news.description }}</div>
+        <div class="item-info-block">
+          <div class="item-views-counter-block">
             <i class="fa fa-eye"></i>
             <span>{{ news.viewCount }}</span>
           </div>
-          <div class="item_comments_counter_block">
+          <div class="item-comments-counter-block">
             <i class="fa fa-comment"></i>
             <span>{{ news.commentsCount }}</span>
           </div>
@@ -28,9 +28,9 @@
       </div>
     </div>
   </div>
-  <div class="col-sm-3 d-none d-sm-block news_item_image_block">
+  <div class="col-sm-3 d-none d-sm-block news-item-image-block">
     <a
-      class="float-right news_item_image_container"
+      class="float-right news-item-image-container"
       routerLink="/news/{{ news.ID }}"
       style="
         background: url({{ news.image }}) center no-repeat;

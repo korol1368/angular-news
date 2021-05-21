@@ -1,17 +1,19 @@
-.section_title_block {
+@import 'src/scss/variables';
+
+.section-title-block {
   display: flex;
   margin-bottom: 20px;
 
-  .section_title {
+  .section-title {
     font-size: 36px;
     font-weight: 600;
-    color: #000;
+    color: $black;
     text-decoration: none;
   }
 
-  .section_title_line {
+  .section-title-line {
     width: 100%;
-    border-bottom: 1px #a9a9a9 solid;
+    border-bottom: 1px $gray solid;
     margin: 0 0 16px 10px;
   }
 }
