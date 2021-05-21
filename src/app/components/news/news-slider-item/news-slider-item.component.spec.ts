@@ -1,6 +1,6 @@
 import {ComponentFixture, TestBed} from '@angular/core/testing';
-
 import {NewsSliderItemComponent} from './news-slider-item.component';
+import {CUSTOM_ELEMENTS_SCHEMA} from '@angular/core';
 
 describe('NewsSliderItemComponent', () => {
   let component: NewsSliderItemComponent;
@@ -9,6 +9,7 @@ describe('NewsSliderItemComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       declarations: [NewsSliderItemComponent],
+      schemas: [CUSTOM_ELEMENTS_SCHEMA],
     }).compileComponents();
   });
 

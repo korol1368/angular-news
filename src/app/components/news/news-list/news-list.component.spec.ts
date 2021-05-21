@@ -1,26 +1,25 @@
 import {ComponentFixture, TestBed} from '@angular/core/testing';
-import {NewsFormComponent} from './news-form.component';
+import {NewsListComponent} from './news-list.component';
 import {CUSTOM_ELEMENTS_SCHEMA} from '@angular/core';
-import {DataService} from '../../../services/data.service';
 import {NewsService} from '../../../services/news.service';
+import {DataService} from '../../../services/data.service';
 import {HttpClientTestingModule} from '@angular/common/http/testing';
-import {ReactiveFormsModule} from '@angular/forms';
 
-describe('NewsFormComponent', () => {
-  let component: NewsFormComponent;
-  let fixture: ComponentFixture<NewsFormComponent>;
+describe('NewsListComponent', () => {
+  let component: NewsListComponent;
+  let fixture: ComponentFixture<NewsListComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [NewsFormComponent],
-      imports: [HttpClientTestingModule, ReactiveFormsModule],
+      declarations: [NewsListComponent],
+      imports: [HttpClientTestingModule],
       providers: [DataService, NewsService],
       schemas: [CUSTOM_ELEMENTS_SCHEMA],
     }).compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(NewsFormComponent);
+    fixture = TestBed.createComponent(NewsListComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

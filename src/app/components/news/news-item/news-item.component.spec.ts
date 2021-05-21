@@ -1,22 +1,20 @@
 import {ComponentFixture, TestBed} from '@angular/core/testing';
-import {NewsDetailComponent} from './news-detail.component';
+import {NewsItemComponent} from './news-item.component';
 import {CUSTOM_ELEMENTS_SCHEMA} from '@angular/core';
-import {RouterTestingModule} from '@angular/router/testing';
 
-describe('NewsDetailComponent', () => {
-  let component: NewsDetailComponent;
-  let fixture: ComponentFixture<NewsDetailComponent>;
+describe('NewsItemComponent', () => {
+  let component: NewsItemComponent;
+  let fixture: ComponentFixture<NewsItemComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [NewsDetailComponent],
-      imports: [RouterTestingModule],
+      declarations: [NewsItemComponent],
       schemas: [CUSTOM_ELEMENTS_SCHEMA],
     }).compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(NewsDetailComponent);
+    fixture = TestBed.createComponent(NewsItemComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
