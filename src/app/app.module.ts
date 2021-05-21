@@ -11,6 +11,7 @@ import {NewsSliderComponent} from './components/news/news-slider/news-slider.com
 import {NewsSliderItemComponent} from './components/news/news-slider-item/news-slider-item.component';
 import {DataService} from './services/data.service';
 import {HttpClientModule} from '@angular/common/http';
+import {NewsService} from './services/news.service';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,7 @@ import {HttpClientModule} from '@angular/common/http';
     NewsSliderItemComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, NgbModule, HttpClientModule],
-  providers: [DataService],
+  providers: [DataService, NewsService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
