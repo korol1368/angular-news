@@ -1,31 +1,27 @@
-<div class="row news_item_block">
+<div *ngIf="news" class="row news_item_block">
   <div class="col-sm-9 col-12">
     <div class="row">
       <div class="col-sm-2 d-none d-sm-block"></div>
       <div class="col-sm-10 col-12">
         <div class="news_item_tag_block">
-          <a class="tag" href="/temy/nalog-na-pribyl">Податок на прибуток</a>
+          <a *ngFor="let tag of news.tags" class="tag" href="{{ tag.url }}}">{{ tag.title }}</a>
         </div>
       </div>
     </div>
     <div class="row">
       <div class="col-sm-2 d-none d-sm-block news_item_time_block">
-        <span>11:40</span>
+        <span>{{ news.date | date: 'HH:mm' }}</span>
       </div>
       <div class="col-sm-10 col-12 news_item_body">
-        <a
-          class="article_title"
-          href="/news/203705_sudova-praktika-vs-v-superechkakh-z-pitan-ttsu-ta-oskarzhennya-rshen-dps"
-          >Судова практика ВС в суперечках з питань ТЦУ та оскарження рішень ДПС</a
-        >
+        <a class="article_title" href="{{ news.link }}">{{ news.title }}</a>
         <div class="item_info_block">
           <div class="item_views_counter_block">
             <i class="fa fa-eye"></i>
-            <span>17</span>
+            <span>{{ news.viewCount }}</span>
           </div>
           <div class="item_comments_counter_block">
             <i class="fa fa-comment"></i>
-            <span>0</span>
+            <span>{{ news.commentsCount }}</span>
           </div>
         </div>
       </div>
@@ -34,9 +30,9 @@
   <div class="col-sm-3 d-none d-sm-block news_item_image_block">
     <a
       class="float-right news_item_image_container"
-      href="/news/203705_sudova-praktika-vs-v-superechkakh-z-pitan-ttsu-ta-oskarzhennya-rshen-dps"
+      href="{{ news.link }}"
       style="
-        background: url(https://ligazakon.net/static_liga_net/THUMB/NZ205390_166x166.jpg) center no-repeat;
+        background: url({{ news.image }}) center no-repeat;
         background-size: cover;
       "
     ></a>
