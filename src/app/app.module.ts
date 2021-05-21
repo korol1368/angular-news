@@ -12,6 +12,7 @@ import {NewsSliderItemComponent} from './components/news/news-slider-item/news-s
 import {DataService} from './services/data.service';
 import {HttpClientModule} from '@angular/common/http';
 import {NewsService} from './services/news.service';
+import {ReactiveFormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,7 @@ import {NewsService} from './services/news.service';
     NewsSliderComponent,
     NewsSliderItemComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, NgbModule, HttpClientModule],
+  imports: [BrowserModule, AppRoutingModule, NgbModule, HttpClientModule, ReactiveFormsModule],
   providers: [DataService, NewsService],
   bootstrap: [AppComponent],
 })
