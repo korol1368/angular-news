@@ -1,5 +1,8 @@
 import {Component, OnInit} from '@angular/core';
 import {FormControl, FormGroup, Validators} from '@angular/forms';
+import {News} from '../../../models/news.interface';
+import {NewsService} from '../../../services/news.service';
+import {take} from 'rxjs/operators';
 
 @Component({
   selector: 'app-news-form',
@@ -9,7 +12,7 @@ import {FormControl, FormGroup, Validators} from '@angular/forms';
 export class NewsFormComponent implements OnInit {
   form!: FormGroup;
 
-  constructor() {}
+  constructor(private newsService: NewsService) {}
 
   ngOnInit(): void {
     this.form = new FormGroup({
@@ -23,5 +26,15 @@ export class NewsFormComponent implements OnInit {
     if (this.form.invalid) {
       return;
     }
+
+    const news = {
+      title: this.form.value.title,
+      description: this.form.value.description,
+    } as News;
+
+    this.newsService
+      .addNews(news)
+      .pipe(take(1))
+      .subscribe(() => this.form.reset());
   }
 }
