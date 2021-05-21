@@ -1,0 +1,32 @@
+<div class="news-form">
+  <div class="news-form-title mb-3">Додати новину</div>
+  <form [formGroup]="form" (ngSubmit)="submit()">
+    <div class="mb-3">
+      <label for="title" class="form-label">Заголовок</label>
+      <input
+        formControlName="title"
+        type="text"
+        class="form-control"
+        [class.is-invalid]="form.get('title')?.invalid && form.get('title')?.touched"
+        id="title"
+      />
+      <div *ngIf="form.get('title')?.hasError('required')" class="invalid-feedback">
+        Заголовок обов'язково для заповнення
+      </div>
+    </div>
+    <div class="mb-3">
+      <label for="description" class="form-label">Опис</label>
+      <textarea
+        formControlName="description"
+        [class.is-invalid]="form.get('description')?.invalid && form.get('description')?.touched"
+        class="form-control"
+        id="description"
+        rows="3"
+      ></textarea>
+      <div *ngIf="form.get('description')?.hasError('required')" class="invalid-feedback">
+        Опис обов'язково для заповнення
+      </div>
+    </div>
+    <button type="submit" class="btn btn-success btn-block">Додати</button>
+  </form>
+</div>

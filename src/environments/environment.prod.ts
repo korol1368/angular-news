@@ -1,3 +1,6 @@
 export const environment = {
-  production: true
+  production: true,
+  apiUrl: {
+    news: '/assets/mock-responses/news.json',
+  },
 };
