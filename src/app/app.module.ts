@@ -13,6 +13,8 @@ import {DataService} from './services/data.service';
 import {HttpClientModule} from '@angular/common/http';
 import {NewsService} from './services/news.service';
 import {ReactiveFormsModule} from '@angular/forms';
+import {NewsDetailComponent} from './components/news/news-detail/news-detail.component';
+import {NewsComponent} from './components/news/news.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +24,8 @@ import {ReactiveFormsModule} from '@angular/forms';
     NewsFormComponent,
     NewsSliderComponent,
     NewsSliderItemComponent,
+    NewsDetailComponent,
+    NewsComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, NgbModule, HttpClientModule, ReactiveFormsModule],
   providers: [DataService, NewsService],

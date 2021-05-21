@@ -1,7 +1,7 @@
 <div *ngIf="news" class="analytics_article" style="width: 100%; display: inline-block">
   <a
     class="analytics_img_container"
-    href="{{ news.link }}"
+    routerLink="/news/{{ news.ID }}"
     style="
       background: url({{ news.image }}) top center no-repeat;
       background-size: cover;
@@ -10,7 +10,7 @@
   <div class="analytics_tags_block">
     <a *ngFor="let tag of news.tags" class="tag" href="{{ tag.url }}">{{ tag.title }}</a>
   </div>
-  <a class="article_title" href="{{ news.link }}">{{ news.title }}</a>
+  <a class="article_title" routerLink="/news/{{ news.ID }}">{{ news.title }}</a>
   <p class="article_description">
     {{ news.description }}
   </p>
