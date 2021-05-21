@@ -4,6 +4,9 @@
 
 export const environment = {
   production: false,
+  apiUrl: {
+    news: '/assets/mock-responses/news.json',
+  },
 };
 
 /*

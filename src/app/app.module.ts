@@ -9,6 +9,8 @@ import {NewsItemComponent} from './components/news/news-item/news-item.component
 import {NewsFormComponent} from './components/news/news-form/news-form.component';
 import {NewsSliderComponent} from './components/news/news-slider/news-slider.component';
 import {NewsSliderItemComponent} from './components/news/news-slider-item/news-slider-item.component';
+import {DataService} from './services/data.service';
+import {HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -19,8 +21,8 @@ import {NewsSliderItemComponent} from './components/news/news-slider-item/news-s
     NewsSliderComponent,
     NewsSliderItemComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, NgbModule],
-  providers: [],
+  imports: [BrowserModule, AppRoutingModule, NgbModule, HttpClientModule],
+  providers: [DataService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
