@@ -7,6 +7,10 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
+    "lint:prettier": "prettier --check \"src/**/*.*\"",
+    "lint:prettier:fix": "prettier --write \"src/**/*.*\"",
+    "lint:sass": "sass-lint -c ./.sass-lint.yml -v --max-warnings=0",
+    "lint:sass:fix": "sass-lint-auto-fix -c ./.sass-lint.yml",
     "e2e": "ng e2e"
   },
   "private": true,
@@ -19,7 +23,9 @@
     "@angular/platform-browser": "~11.1.1",
     "@angular/platform-browser-dynamic": "~11.1.1",
     "@angular/router": "~11.1.1",
+    "prettier": "^2.3.0",
     "rxjs": "~6.6.0",
+    "sass-lint-auto-fix": "^0.21.2",
     "tslib": "^2.0.0",
     "zone.js": "~0.11.3"
   },
