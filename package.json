@@ -12,7 +12,7 @@
     "lint:sass": "sass-lint -c ./.sass-lint.yml -v --max-warnings=0",
     "lint:sass:fix": "sass-lint-auto-fix -c ./.sass-lint.yml",
     "e2e": "ng e2e",
-    "postinstall": "ng build --prod"
+    "heroku-postinstall": "ng build --prod"
   },
   "private": true,
   "dependencies": {
